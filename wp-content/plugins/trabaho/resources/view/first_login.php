@@ -14,8 +14,9 @@ add_shortcode("select_user_type", "display_user_type");
  * @param $atts
  * @param null $content
  * @return string
+ * Use it under page or post.
  * Ex Input Short Code 1: [select_user_type type="Select membership, Employee, Employer" ]
- * Ex Input Short Code 2: [select_user_type type="Select membership, Employee, Employer" id="0,1,2"]
+ * Ex Input Short Code 2: [select_user_type type="Select membership, Employee, Employer,Investor" id="0,1,2,3"]
  */
 function display_user_type($atts, $content=null) {
     $variable = extract(
@@ -32,6 +33,11 @@ function display_user_type($atts, $content=null) {
 
     $html  = '<div class="container">' ;
 
+    //    $html  .= '<div class="col-md-3" > </div> ';
+
+    //    $html .= '<div class="col-md-6 membership-select-container" >';
+
+    $html .= '<h4> What is your membership type: </h4><br>';
 
     $html .= $_SESSION['error_message'];
 
@@ -53,7 +59,13 @@ function display_user_type($atts, $content=null) {
 
     $html .= '</form>';
 
+    //    $html .=  '</div>';
+
+    //    $html  .= '<div class="col-md-3" > </div>';
+
     $html .= '</div>';
+
+
 
 
 

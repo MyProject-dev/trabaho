@@ -14,3 +14,14 @@
 	float:left;
 	width:69px;
 }
+
+
+.membership-select-container {
+	border: 1px solid grey;
+	padding-bottom: 20px;
+	border-radius: 5px;
+}
+
+.entry-title {
+	display: none;
+}

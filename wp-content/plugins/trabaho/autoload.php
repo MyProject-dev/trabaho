@@ -6,11 +6,21 @@ if(!function_exists('wp_get_current_user')) {
     include(ABSPATH . "wp-includes/pluggable.php");
 }
 
+
+/**
+ * Header
+ */
+
+require( plugin_dir_path(__FILE__)  . 'bootstrap/bootstrap.php');
+
+
 /**
  * Require config here
  */
 
 require( plugin_dir_path(__FILE__)  . 'config/config_data.php');
+
+
 /**
  * Get current user
  */
@@ -27,6 +37,8 @@ require( plugin_dir_path(__FILE__)  . 'config/config_data.php');
 /**
  * Require all the css here
  */
+
+echo "<link rel='stylesheet' type='text/css' href='" . plugins_url( 'public/css/style.css', __FILE__ )  . "' >";
 
 
 /**

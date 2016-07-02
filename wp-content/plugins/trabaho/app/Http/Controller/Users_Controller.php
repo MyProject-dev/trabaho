@@ -15,6 +15,7 @@ class Users_Controller extends  Controller {
         $current_user_display_name = "",
         $current_user_level = "";
 
+    private $table_name = 'wp_users';
 
     function  __construct()
     {
@@ -51,9 +52,9 @@ class Users_Controller extends  Controller {
     }
 
     public function updateMembershipType($user_id, $membershipType) {
-
-        echo "user id = " . $user_id . "Update membershipt type";
-
+       //echo "user id = " . $user_id . "Update membershipt type";
+       global $wpdb;
+       return $this->update($wpdb, $this->table_name,array('user_status'=>$membershipType), 'ID', $user_id);
         // $this->query();
         // $this->insert();
     }
