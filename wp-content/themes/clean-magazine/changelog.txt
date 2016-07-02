@@ -1,0 +1,25 @@
+== Changelog ==
+
+= 0.4 =
+* Removed: Header 403 forbidden messages
+
+= 0.3 =
+* Updated theme Tags in compliance with new tag changes
+* Bug Fixed: Background image issue
+* Removed: Admin bar css
+
+= 0.2 =
+* Added Theme Options
+* Added Header Highlights
+* Added Featured Content
+* Added News Ticker
+* Added Featured Slider
+* Added Color Options
+* Added Advertisement Widget and Instagram Widget
+* Added Header Right Sidebar
+* Updated: Structure using hooks
+* Release on catchthemes.com
+
+
+= 0.1 =
+* Initial Release
