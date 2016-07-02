@@ -12,6 +12,7 @@
  * @since nirvana 0.5
  */
 
+
 get_header(); ?>
 
 		<section id="container" class="one-column">

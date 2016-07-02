@@ -6,11 +6,16 @@ if(!function_exists('wp_get_current_user')) {
     include(ABSPATH . "wp-includes/pluggable.php");
 }
 
+/**
+ * Require config here
+ */
 
-
+require( plugin_dir_path(__FILE__)  . 'config/config_data.php');
 /**
  * Get current user
  */
+
+
 
 
 
