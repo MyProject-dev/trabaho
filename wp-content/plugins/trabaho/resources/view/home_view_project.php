@@ -37,7 +37,7 @@ function display_view_project_home($atts, $content=null) {
 
                     $html .= '<form method="GET" action="'.uri_apply_project.'" >';
                     $html .= '<div style = "display: inline;padding-right:20px" ><input type="submit" value="Apply" /> </div>';
-                    $html .= '<input type="hidden" name="project_id" value="' .  $result->id . '" /> </div>';
+                    $html .= '<input type="hidden" name="project_id" value="' .  $result->id . '" /> ';
                     $html .= '</form>';
                 $html .= '</div>';
             $html .= '</div>';

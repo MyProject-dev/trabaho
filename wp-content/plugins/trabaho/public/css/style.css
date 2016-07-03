@@ -42,6 +42,7 @@
 }
 
 .data-container pre {
+	overflow-y: hidden;
 	font-family: Arial !important;
 }
 
