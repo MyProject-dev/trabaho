@@ -51,29 +51,19 @@ function project_list_display($atts, $content=null) {
         $applicationDetails = $application->getApplicationsByProjectId($projectDetail->id, 5);
 
         foreach($applicationDetails as $applicationDetail) {
-
             $counter1++;
-
-
             $userDetail = $user->getUserInfoByUserId($applicationDetail->user_id);
-
-
             // print_r( $userDetail);
             $html .= '<li>';
-
-
                 $html .=  $counter1 . '. ' . '<span> Subject:  <b>' . $applicationDetail->subject . '</b></span>';
                 $html .= '<br>';
                 $html .= ' <span> Applicant Name: <a href="'. uri_user_profile . '?user_id='.$userDetail->ID.'" target="_blank"> ' . $userDetail->display_name . '</a></span>';
                 $html .= '<br><br>';
             $html .= '</li>';
-
-
         }
-
-        if($totalApplication > 5) {
-            $html .= '<a href="#" > more </a>';
-        }
+            //        if($totalApplication > 5) {
+            $html .= '<a href="'. uri_project_list_details .'?project_id='. $projectDetail->id . '" > View more details... </a>';
+            //        }
 
         $html .= '</ul>';
     }

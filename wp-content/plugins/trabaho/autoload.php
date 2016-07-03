@@ -95,6 +95,7 @@ foreach ($files as $file) {
  * Require all short code views here
  */
 
+
 //require( plugin_dir_path(__FILE__)  . '/resources/view/tshirt_designer.php');
 //require( plugin_dir_path(__FILE__)  . '/resources/view/first_login.php');
 //require( plugin_dir_path(__FILE__)  . '/resources/view/add_project.php');
