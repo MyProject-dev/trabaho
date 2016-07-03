@@ -22,4 +22,6 @@ define('uri_application_submit_success', get_site_url() . '/submit-application-s
 
 define('uri_apply_project', get_site_url() . '/apply-project');
 
+define('uri_user_profile', get_site_url() . '/user/profile');
+
 
