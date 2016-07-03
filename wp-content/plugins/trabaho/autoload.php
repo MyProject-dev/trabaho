@@ -57,14 +57,17 @@ echo "<link rel='stylesheet' type='text/css' href='" . plugins_url( 'public/css/
  /**
  * Require all the controller here
  */
-//require( plugin_dir_path(__FILE__)  . 'app/Http/Controller/Controller.php');
+require( plugin_dir_path(__FILE__)  . 'app/Http/Controller/Controller.php');
 //require( plugin_dir_path(__FILE__)  . 'app/Http/Controller/User_Controller.php');
 //require( plugin_dir_path(__FILE__)  . 'app/Http/Controller/Project_Controller.php');
-
 $files = glob(plugin_dir_path(__FILE__) . 'app/Http/Controller/*.php');
 foreach ($files as $file) {
-    //echo '<br>' . $file;
-    require($file);
+//    echo " <br> nice ". basename($file);
+//    echo '<br>' . $file;
+    if(basename($file) == 'Controller.php') {
+    } else {
+        require($file);
+    }
 }
 
 /**
