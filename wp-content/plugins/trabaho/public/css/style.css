@@ -25,3 +25,34 @@
 .entry-title {
 	display: none;
 }
+
+
+.add_product {
+	/*border:1px solid red;*/
+}
+.add_product input,
+.add_product textarea{
+
+}
+
+.data-container input,
+.data-container textarea {
+	resize:none;
+	width:50%;
+}
+
+.data-container pre {
+	font-family: Arial !important;
+}
+
+.success {
+	color:green;
+}
+
+.warning {
+	color:orange;
+}
+
+.error {
+	color:red;
+}

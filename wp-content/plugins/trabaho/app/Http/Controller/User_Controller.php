@@ -2,7 +2,7 @@
 
 namespace App;
 
-
+use App\Controller;
 
 class Users_Controller extends  Controller {
 
