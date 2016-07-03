@@ -52,9 +52,8 @@ function tb_admin_settings() {
 /**
  * @todo: create sql queries for wordpress with alter table column add if not exist
  * @todo fixed the id to just name of employee and employer link: trabaho/wp-content/plugins/trabaho/app/Http/Post/Users_Post.php:31
- *
+ * @todo add security when click project in home page for applicant submission. project_id as get is not good for security
  */
-
 ?>
 
 

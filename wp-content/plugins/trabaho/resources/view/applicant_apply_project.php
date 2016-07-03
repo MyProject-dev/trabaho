@@ -16,12 +16,12 @@ function view_applicant_apply_project($atts, $content=null) {
 
     $project = new App\Project_Controller();
 
-    $projectDetails  = $project->getProjectByProjectId($_GET['pid']);
+    $projectDetails  = $project->getProjectByProjectId($_GET['project_id']);
 
     //echo "session " . $_SESSION['project_id'];
 
     // @todo: do query project id via title because title is the one clicked from homepage
-    $_SESSION['project_id'] = $_GET['pid'];
+    $_SESSION['project_id'] = $_GET['project_id'];
 
     // echo " id = " . $projectDetails[0]->id;
 
