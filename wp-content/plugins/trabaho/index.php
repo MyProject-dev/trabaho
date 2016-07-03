@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Plugin Name: Trabaho
  * Plugin URI: http://www.trabaho.com
