@@ -42,6 +42,21 @@ function project_list_display($atts, $content=null) {
 
         $totalApplication = $project->getTotalApplication($projectDetail->id);
 
+//        $html .= '<a href="' . uri_update_project . '?project_id=' . $projectDetail->id . '"><input type="button" value="Edit" /></a>';
+
+        $html .= '<form method="GET" action="'.uri_update_project.'">
+                    <input type="hidden" name="project_id" value="' . $projectDetail->id . '"  />
+                    <input type="submit" name="project_update" value="Update" />
+                </form>
+                ';
+
+        $html .= '&nbsp; &nbsp';
+
+        $html .= '<form method="POST" >
+                         <input type="hidden" name="project_id" value="'.$projectDetail->id.'" />
+                         <input type="submit"  value="Delete" />
+                         </form>';
+
         $html .= '<h3>'.$projectDetail->title.'</h3>';
 
         $html .= '<h5>' . $project->getTotalApplication($projectDetail->id) . ' applicants</h5>';
@@ -55,15 +70,22 @@ function project_list_display($atts, $content=null) {
             $userDetail = $user->getUserInfoByUserId($applicationDetail->user_id);
             // print_r( $userDetail);
             $html .= '<li>';
+
+
+
+
+
+                $html .= '<br>';
+
                 $html .=  $counter1 . '. ' . '<span> Subject:  <b>' . $applicationDetail->subject . '</b></span>';
                 $html .= '<br>';
                 $html .= ' <span> Applicant Name: <a href="'. uri_user_profile . '?user_id='.$userDetail->ID.'" target="_blank"> ' . $userDetail->display_name . '</a></span>';
                 $html .= '<br><br>';
             $html .= '</li>';
         }
-            //        if($totalApplication > 5) {
+                    if($totalApplication > 0) {
             $html .= '<a href="'. uri_project_list_details .'?project_id='. $projectDetail->id . '" > View more details... </a>';
-            //        }
+                    }
 
         $html .= '</ul>';
     }

@@ -16,9 +16,12 @@ function view_project_list_detail($atts, $content=null){
 
     $counter=0;
     global $wpdb;
+
+
+
     $applications_results = $wpdb->get_results(
         $wpdb->prepare("Select * from wp_timelog_projects as p
-        join wp_timelog_applications as a on p.id =a.project_id join wp_users as u on u.id = a.user_id where p.id = " . $project_id, ARRAY_A)
+        join wp_timelog_applications as a on p.id = a.project_id  join wp_users as u on u.id = a.user_id where p.id = " . $project_id, ARRAY_A)
     );
     $html  = '<div class="container">';
 

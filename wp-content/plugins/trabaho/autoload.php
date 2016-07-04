@@ -85,6 +85,15 @@ foreach ($files as $file) {
 }
 
 
+/**
+ * Delete action
+ */
+$files = glob(plugin_dir_path(__FILE__) . 'app/Http/Delete/*.php');
+foreach ($files as $file) {
+    //echo '<br>' . $file;
+    require($file);
+}
+
 
 /**
  * Get actions here

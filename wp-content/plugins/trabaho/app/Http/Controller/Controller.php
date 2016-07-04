@@ -31,6 +31,12 @@ class Controller {
 
     public function delete() {
 
+
+
+
+
+
+
     }
 
     public function query() {

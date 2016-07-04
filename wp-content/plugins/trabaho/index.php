@@ -54,6 +54,7 @@ function tb_admin_settings() {
  * @todo fixed the id to just name of employee and employer link: trabaho/wp-content/plugins/trabaho/app/Http/Post/Users_Post.php:31
  * @todo add security when click project in home page for applicant submission. project_id as get is not good for security
  * @todo fix redirecting when visiting profile
+ * @todo fix in project_id anywhere in update, delete and apply project
  */
 ?>
 
