@@ -21,7 +21,7 @@ add_shortcode("view_project_home", "display_view_project_home");
 function display_view_project_home($atts, $content=null) {
     global $wpdb;
     $results = $wpdb->get_results(
-        $wpdb->prepare("Select * from wp_timelog_projects limit 5", ARRAY_A)
+        $wpdb->prepare("Select * from wp_timelog_projects order by id desc limit 5 ", ARRAY_A)
     );
 
     $html  = '<div class="container">' ;

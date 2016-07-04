@@ -24,7 +24,7 @@ function view_project_list_detail($atts, $content=null){
 
     $html .= '<h2 >Title: </h2>'.$applications_results[0]->title;
     $html .= '<h2> Description: </h2><pre>'.$applications_results[0]->description.'</pre>';
-    $html .= '<input type="button" value="Edit" />';
+    $html .= '<a href="' . uri_add_project . '?project_id=' . $project_id . '&status=edit"><input type="button" value="Edit" /></a>';
     $html .= '&nbsp; &nbsp';
     $html .= '<input type="button" value="Delete" />';
     $html .= '<br><br>';
