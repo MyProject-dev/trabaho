@@ -46,7 +46,7 @@ function project_list_display($atts, $content=null) {
 
         $html .= '<form method="GET" action="'.uri_update_project.'">
                     <input type="hidden" name="project_id" value="' . $projectDetail->id . '"  />
-                    <input type="submit" name="project_update" value="Update" />
+                    <input type="submit"  value="Update" />
                 </form>
                 ';
 
@@ -54,12 +54,18 @@ function project_list_display($atts, $content=null) {
 
         $html .= '<form method="POST" >
                          <input type="hidden" name="project_id" value="'.$projectDetail->id.'" />
-                         <input type="submit"  value="Delete" />
+                         <input type="submit"  value="Delete" name="project_delete" />
                          </form>';
+
 
         $html .= '<h3>'.$projectDetail->title.'</h3>';
 
+
+
+
         $html .= '<h5>' . $project->getTotalApplication($projectDetail->id) . ' applicants</h5>';
+
+
 
         $html .= '<ul>';
 

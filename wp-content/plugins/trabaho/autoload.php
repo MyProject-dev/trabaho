@@ -94,6 +94,15 @@ foreach ($files as $file) {
     require($file);
 }
 
+/**
+ * Update action
+ */
+$files = glob(plugin_dir_path(__FILE__) . 'app/Http/Update/*.php');
+foreach ($files as $file) {
+    //echo '<br>' . $file;
+    require($file);
+}
+
 
 /**
  * Get actions here
