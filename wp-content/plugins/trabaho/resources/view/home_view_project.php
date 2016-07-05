@@ -30,8 +30,8 @@ function display_view_project_home($atts, $content=null) {
                 $html .= '<h2 style = "font-size: 18px;" >Title:'.$result->title.'</h2>';
                 $html .= '<h2 style = "font-size: 18px;" > Description: </h2><p><pre>'.$result->description.'</pre></p>';
                 $html .= '<div style = "display: block;;margin-bottom: 20px">';
-                    $html .= '<div style = "display: inline;padding-right:20px" >Type: '.$result->type.'</div>|';
-                    $html .= '<div style = "display: inline;padding-right:20px" >Rate: '.$result->rate.'</div>|';
+                    $html .= '<div style = "display: inline;padding-right:20px" >Type: '.$result->work_type.'</div>|';
+                    $html .= '<div style = "display: inline;padding-right:20px" >Rate: $'.number_format($result->rate).' </div>|';
                     $html .= '<div style = "display: inline;padding-right:20px" >Duration:'.$result->duration.' </div>|';
                     $html .= '<div style = "display: inline;padding-right:20px" >Vacancy: '.$result->vacancy.'</div>| ';
 
