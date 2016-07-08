@@ -21,7 +21,7 @@ add_shortcode("view_project_home", "display_view_project_home");
 function display_view_project_home($atts, $content=null) {
     global $wpdb;
     $results = $wpdb->get_results(
-        $wpdb->prepare("Select * from wp_timelog_projects limit 5", ARRAY_A)
+        $wpdb->prepare("Select * from wp_timelog_projects order by id desc limit 5 ", ARRAY_A)
     );
 
     $html  = '<div class="container">' ;
@@ -30,14 +30,14 @@ function display_view_project_home($atts, $content=null) {
                 $html .= '<h2 style = "font-size: 18px;" >Title:'.$result->title.'</h2>';
                 $html .= '<h2 style = "font-size: 18px;" > Description: </h2><p><pre>'.$result->description.'</pre></p>';
                 $html .= '<div style = "display: block;;margin-bottom: 20px">';
-                    $html .= '<div style = "display: inline;padding-right:20px" >Type: '.$result->type.'</div>|';
-                    $html .= '<div style = "display: inline;padding-right:20px" >Rate: '.$result->rate.'</div>|';
+                    $html .= '<div style = "display: inline;padding-right:20px" >Type: '.$result->work_type.'</div>|';
+                    $html .= '<div style = "display: inline;padding-right:20px" >Rate: $'.number_format($result->rate).' </div>|';
                     $html .= '<div style = "display: inline;padding-right:20px" >Duration:'.$result->duration.' </div>|';
                     $html .= '<div style = "display: inline;padding-right:20px" >Vacancy: '.$result->vacancy.'</div>| ';
 
                     $html .= '<form method="GET" action="'.uri_apply_project.'" >';
                     $html .= '<div style = "display: inline;padding-right:20px" ><input type="submit" value="Apply" /> </div>';
-                    $html .= '<input type="hidden" name="project_id" value="' .  $result->id . '" /> </div>';
+                    $html .= '<input type="hidden" name="project_id" value="' .  $result->id . '" /> ';
                     $html .= '</form>';
                 $html .= '</div>';
             $html .= '</div>';

@@ -58,4 +58,14 @@ class Users_Controller extends  Controller {
         // $this->query();
         // $this->insert();
     }
+
+    public function getUserInfoByUserId($user_id) {
+        global $wpdb;
+        $results = $wpdb->get_results(
+            $wpdb->prepare("Select * from $this->table_name where id = " . $user_id, ARRAY_A)
+        );
+        return $results[0];
+    }
+
+
 }

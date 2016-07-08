@@ -52,8 +52,8 @@ function view_applicant_apply_project($atts, $content=null) {
     $html .= '<textarea name="message" rows="5">'. $_POST['message'].'</textarea>';
     $html .= '<br><br>';
 
-    $html .='<h3> Upload Resume(CV) </h3>';
-    $html .= '<input type="file" name="file" /> ';
+//    $html .='<h3> Upload Resume(CV) </h3>';
+//    $html .= '<input type="file" name="file" /> ';
 
     $html .= '<br><br>';
     $html .= '<input type="submit" value="submit" name="applicant_submit" />';

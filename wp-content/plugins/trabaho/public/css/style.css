@@ -42,8 +42,20 @@
 }
 
 .data-container pre {
+	overflow-y: hidden;
 	font-family: Arial !important;
 }
+
+.data-container ul {
+
+}
+
+
+.data-container ul li {
+	list-style: none !important;
+}
+
+
 
 .success {
 	color:green;

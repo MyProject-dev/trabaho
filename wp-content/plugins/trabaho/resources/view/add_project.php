@@ -1,10 +1,6 @@
 <?php
 
 
-
-
-
-
 add_shortcode("add_project", "display_add_project");
 
 function display_add_project($atts, $content=null) {
@@ -16,6 +12,7 @@ function display_add_project($atts, $content=null) {
             ), $atts
         )
     );
+
 
 
     $html  = '<div class="container add_product data-container">';

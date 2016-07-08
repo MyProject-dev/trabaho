@@ -44,7 +44,7 @@ if(isset($_POST['applicant_submit'])) {
 
 } else {
     ///echo "<br> application not submitted";
-    $_SESSION['error_message'] = '<span class="warning">Please submit application for this project</span>';
+//    $_SESSION['error_message'] = '<span class="warning">Please submit application for this project</span>';
 
 }
 
